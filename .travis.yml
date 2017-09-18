@@ -4,3 +4,10 @@ node_js:
 cache: yarn
 script:
   - yarn test
+notifications:
+  slack:
+    rooms: 
+      - secure: $slack_travis
+    on_success: change
+    on_failure: change
+  email: false
