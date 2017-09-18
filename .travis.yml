@@ -3,9 +3,6 @@ node_js:
   - "stable"
 before_script:
   - yarn
-cache:
-  yarn
-  directories:
-  - node_modules
+cache: yarn
 script:
   - yarn test
