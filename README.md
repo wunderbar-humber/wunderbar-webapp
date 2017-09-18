@@ -1,4 +1,4 @@
-# Wunderbar WebApp
+# Wunderbar WebApp      [![Build Status](https://travis-ci.org/fishsticks-humber/wunderbar-webapp.svg?branch=develop)](https://travis-ci.org/fishsticks-humber/wunderbar-webapp)
 
 This is the front end for the Wunderbar application.
 
