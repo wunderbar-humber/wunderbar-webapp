@@ -6,3 +6,4 @@ script:
   - yarn test
 notifications:
     slack: fishsticks-humber:yBlIrV8LokTLApwdkvVZJ8K9
+    email: false
