@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/common/Navbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar
+          profileName="Mohit"
+          profileImage="http://materializecss.com/images/yuna.jpg"
+        />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
