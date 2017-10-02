@@ -140,7 +140,7 @@ We are always open to [your feedback](https://github.com/facebookincubator/creat
 After creation, your project should look like this:
 
 ```
-my-app/
+wunderbar-webapp/
   README.md
   node_modules/
   package.json
@@ -148,6 +148,8 @@ my-app/
     index.html
     favicon.ico
   src/
+    components/
+      common/  
     App.css
     App.js
     App.test.js
