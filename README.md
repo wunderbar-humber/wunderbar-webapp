@@ -148,8 +148,13 @@ wunderbar-webapp/
     index.html
     favicon.ico
   src/
+    assets/
+      images/
+      resources/
     components/
-      common/  
+      common/
+      home/
+      profile/
     App.css
     App.js
     App.test.js
