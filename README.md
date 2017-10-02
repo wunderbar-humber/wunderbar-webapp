@@ -13,6 +13,8 @@ This is the front end for the Wunderbar application.
 `yarn test`
 4. Check the commands you can use during development - [Documentation](#available-scripts)
 5. If the tests pass, then start your development in your dedicated branch
+6. Start the development server  
+`yarn start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
