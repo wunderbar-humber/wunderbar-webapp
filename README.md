@@ -8,7 +8,7 @@ This is the front end for the Wunderbar application.
 2. Clone repository  
 `git clone https://github.com/fishsticks-humber/wunderbar-webapp.git`
 3. Install dependencies  
-`yarn install`
+`yarn`
 3. Run a sanity check  
 `yarn test`
 4. Check the commands you can use during development - [Documentation](#available-scripts)
