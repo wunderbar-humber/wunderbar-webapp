@@ -11,6 +11,10 @@ class Navbar extends Component {
           </li>
           <li className="divider" />
           <li>
+            <a href="#!">Bookmarks</a>
+          </li>
+          <li className="divider" />
+          <li>
             <a href="#!">Logout</a>
           </li>
         </ul>
@@ -19,13 +23,15 @@ class Navbar extends Component {
             <a href="#" className="brand-logo left">
               Wunderbar
             </a>
-            {/* <form>
-                            <div className="input-field center hide-on-med-and-down">
-                                <input id="search" type="search" />
-                                <label className="label-icon" for="search"><i className="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
-                            </div>
-                        </form> */}
+            <form>
+              <div className="input-field center hide-on-med-and-down">
+                <input id="search" type="search" />
+                <label className="label-icon" for="search">
+                  <i className="material-icons">search</i>
+                </label>
+                <i className="material-icons">close</i>
+              </div>
+            </form>
             <ul className="right hide-on-med-and-down">
               <li>
                 <a

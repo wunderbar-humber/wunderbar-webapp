@@ -6,6 +6,7 @@ import Profile from './components/profile/Profile';
 import Restaurant from './components/restaurant/Restaurant';
 import logo from './logo.svg';
 import Navbar from './components/common/Navbar';
+import NavbarNew from './components/common/NavbarNew';
 
 /**
  * This component is the root/main component of this React application
@@ -16,6 +17,7 @@ import Navbar from './components/common/Navbar';
 class App extends Component {
   render() {
     return (
+<<<<<<< HEAD
       <Router>
         <div>
           {/* temporary navbar */}
@@ -42,6 +44,20 @@ class App extends Component {
 
           {/* footer */}
           <Footer />
+=======
+      <div className="App">
+        {/* <Navbar
+          profileName="Mohit"
+          profileImage="http://materializecss.com/images/yuna.jpg"
+        /> */}
+        <NavbarNew
+          profileName="Nikita"
+          profileImage="http://materializecss.com/images/yuna.jpg"
+        />
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+>>>>>>> sort of fixed navbar
         </div>
       </Router>
     );
