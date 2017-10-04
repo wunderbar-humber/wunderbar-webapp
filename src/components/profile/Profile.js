@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+/**
+ * This is the main component of the User Profile Page
+ * 
+ * @class Profile
+ * @extends {Component}
+ */
 class Profile extends Component {
   render() {
     return (

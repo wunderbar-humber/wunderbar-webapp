@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import Preloader from '../common/CirclePreloader';
 import './Home.css';
 
+/**
+ * Home components acts as the main component for the Home Page
+ * 
+ * @class Home
+ * @extends {Component}
+ */
 class Home extends Component {
   render() {
     return (

@@ -6,6 +6,8 @@ import React, { Component } from 'react';
  * @see {http://materializecss.com/preloader.html#circular-color|Materialize Preloader}
  * @class CirclePreloader
  * @extends {Component}
+ * 
+ * @author Mohit Deshpande <mohitdeshpande@icloud.com>
  */
 class CirclePreloader extends Component {
   render() {

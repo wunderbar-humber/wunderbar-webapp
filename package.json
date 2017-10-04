@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "docdash": "^0.4.0",
     "husky": "^0.14.3",
+    "jsdoc": "^3.5.5",
     "lint-staged": "^4.2.1",
     "prettier": "^1.7.0",
     "react": "^15.6.1",

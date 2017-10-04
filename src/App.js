@@ -4,6 +4,12 @@ import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
 
+/**
+ * This component is the root/main component of this React application
+ * 
+ * @class App
+ * @extends {Component}
+ */
 class App extends Component {
   render() {
     return (
