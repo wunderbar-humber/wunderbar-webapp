@@ -7,6 +7,7 @@ import Restaurant from './components/restaurant/Restaurant';
 import logo from './logo.svg';
 import Navbar from './components/common/Navbar';
 import NavbarNew from './components/common/NavbarNew';
+<<<<<<< HEAD
 
 /**
  * This component is the root/main component of this React application
@@ -14,6 +15,9 @@ import NavbarNew from './components/common/NavbarNew';
  * @class App
  * @extends {Component}
  */
+=======
+import Card from './components/common/Card';
+>>>>>>> Card
 class App extends Component {
   render() {
     return (
@@ -59,7 +63,23 @@ class App extends Component {
           <h2>Welcome to React</h2>
 >>>>>>> sort of fixed navbar
         </div>
+<<<<<<< HEAD
       </Router>
+=======
+
+        <Card
+          restaurantName="Isshin"
+          restaurantImage="https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256"
+          restaurantCategory="Oriental"
+          restaurantAddress="College Street 232, Toronto, ON"
+          restaurantPhone="(111)-111-1111"
+          restaurantPrice="$$"
+        />
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+>>>>>>> Card
     );
   }
 }
