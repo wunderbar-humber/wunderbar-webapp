@@ -25,6 +25,9 @@ class App extends Component {
                 <li>
                   <Link to="/profile">Profile</Link>
                 </li>
+                <li>
+                  <Link to="/restaurant">Restaurant</Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -32,6 +35,7 @@ class App extends Component {
           {/* Application body */}
           <Route exact path="/" component={Home} />
           <Route path="/profile" component={Profile} />
+          <Route path="/restaurant" component={Restaurant} />
 
           {/* footer */}
           <Footer />
