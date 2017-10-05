@@ -8,8 +8,8 @@ class Card extends Component {
           <div className="card">
             <div className="card-image">
               <img src={this.props.restaurantImage} />
-              <a className="btn-floating halfway-fab waves-effect waves-light red">
-                <i className="material-icons">add</i>
+              <a className="btn-floating halfway-fab waves-effect waves-light blue">
+                <i className="material-icons">bookmark</i>
               </a>
             </div>
             <div className="card-content">
