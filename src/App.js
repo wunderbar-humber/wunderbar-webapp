@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
+import Restaurant from './components/restaurant/Restaurant';
 
 /**
  * This component is the root/main component of this React application
