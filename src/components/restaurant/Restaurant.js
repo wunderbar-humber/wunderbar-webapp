@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import mainImage from './images/1.jpg';
+import secondImage from './images/3.jpg';
+import Carousel from '../common/Carousel';
 
 /**
  * This is the view which show all the details of the restaurant.
@@ -13,6 +15,7 @@ class Restaurant extends Component {
     return (
       <div>
         <div className="container">
+          <Carousel images={[mainImage, secondImage]} />
           <div className="row">
             <div className="col s4">
               <img className="materialboxed" width="400" src={mainImage} />

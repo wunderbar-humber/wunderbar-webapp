@@ -8,17 +8,20 @@ import $ from 'jquery';
  * @extends {Component}
  */
 class Carousel extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    $('.carousel.carousel-slider').carousel({ fullWidth: true });
+  }
 
   render() {
     const images = this.props.images;
-
     return (
       <div className="carousel carousel-slider">
         {images.map(image => {
-          <a className="carousel-item">
-            <img src={image} />
-          </a>;
+          return (
+            <a className="carousel-item">
+              <img src={image} alt="restaurant" />
+            </a>
+          );
         })}
       </div>
     );
