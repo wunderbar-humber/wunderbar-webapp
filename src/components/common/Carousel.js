@@ -16,9 +16,9 @@ class Carousel extends Component {
     const images = this.props.images;
     return (
       <div className="carousel carousel-slider">
-        {images.map(image => {
+        {images.map((image, index) => {
           return (
-            <a className="carousel-item">
+            <a className="carousel-item" key={index}>
               <img src={image} alt="restaurant" />
             </a>
           );
