@@ -4,23 +4,36 @@ import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
 
+/**
+ * This component is the root/main component of this React application
+ * 
+ * @class App
+ * @extends {Component}
+ */
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-          </ul>
+          {/* temporary navbar */}
+          <nav>
+            <div className="nav-wrapper container">
+              <Link to="/" className="brand-logo">
+                Logo
+              </Link>
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li>
+                  <Link to="/profile">Profile</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
 
+          {/* Application body */}
           <Route exact path="/" component={Home} />
           <Route path="/profile" component={Profile} />
 
+          {/* footer */}
           <Footer />
         </div>
       </Router>
