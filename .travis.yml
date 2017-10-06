@@ -4,6 +4,7 @@ node_js:
 cache: yarn
 script:
   - yarn test
+  - yarn build 
 notifications:
     slack: fishsticks-humber:yBlIrV8LokTLApwdkvVZJ8K9
     email: false
