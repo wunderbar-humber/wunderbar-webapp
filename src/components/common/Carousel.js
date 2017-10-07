@@ -9,13 +9,15 @@ import $ from 'jquery';
  */
 class Carousel extends Component {
   componentDidMount() {
-    $('.carousel.carousel-slider').carousel({ fullWidth: true });
+    $(document).ready(function() {
+      $('.carousel').carousel();
+    });
   }
 
   render() {
     const images = this.props.images;
     return (
-      <div className="carousel carousel-slider">
+      <div className="carousel">
         {images.map((image, index) => {
           return (
             <a className="carousel-item" key={index}>
