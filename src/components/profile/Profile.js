@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import About from './About';
 import PastReviews from './PastReviews';
 import PastOrders from './PastOrders';
@@ -14,29 +14,31 @@ import Board from './Board';
 class Profile extends Component {
   render() {
     return (
-      <Router>
-        <nav>
-          <div class="nav-wrapper">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li>
-                <a href="/profile/About">Profile</a>
-              </li>
-              <li>
-                <a href="/profile/Board">Boards</a>
-              </li>
-              <li>
-                <a href="/profile/PastOrders">Past Orders</a>
-              </li>
-              <li>
-                <a href="/profile/PastReviews">Past Reviews</a>
-              </li>
-            </ul>
-            <Route path="/About" component={About} />
-            <Route path="/Board" component={Board} />
-            <Route path="/PastOrders" component={PastOrders} />
-            <Route path="/PastReviews" component={PastReviews} />
-          </div>
-        </nav>
+      <Router basename="/profile">
+        <div>
+          <nav>
+            <div className="nav-wrapper">
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li>
+                  <Link to="/about">Profile</Link>
+                </li>
+                <li>
+                  <Link to="/board">Boards</Link>
+                </li>
+                <li>
+                  <Link to="/pastOrders">Past Orders</Link>
+                </li>
+                <li>
+                  <Link to="/pastReviews">Past Reviews</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <Route path="/about" component={About} />
+          <Route path="/board" component={Board} />
+          <Route path="/pastOrders" component={PastOrders} />
+          <Route path="/pastReviews" component={PastReviews} />
+        </div>
       </Router>
     );
   }
