@@ -5,14 +5,7 @@ class PastReviews extends Component {
     return (
       <div className="container">
         <div className="col s2">
-          <h1>Hello from Past PastReviews</h1>
-          <img
-            src="https://www.pinterest.ca/pin/766315692816936128/"
-            alt=""
-            className="circle responsive-img"
-            height="500"
-            width="500"
-          />
+          <h1>Hello from PastReviews</h1>
         </div>
       </div>
     );

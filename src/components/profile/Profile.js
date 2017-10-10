@@ -4,6 +4,7 @@ import About from './About';
 import PastReviews from './PastReviews';
 import PastOrders from './PastOrders';
 import Board from './Board';
+import './ProfileDesign.css';
 
 /**
  * This is the main component of the User Profile Page
@@ -19,6 +20,21 @@ class Profile extends Component {
           <nav>
             <div className="nav-wrapper">
               <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li>
+                  <div class="col s12 m8 offset-m2 l6 offset-l3">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div className="row valign-wrapper">
+                        <div className="col s2">
+                          <img
+                            src=""
+                            alt=""
+                            className="circle responsive-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
                 <li>
                   <Link to="/about">Profile</Link>
                 </li>
