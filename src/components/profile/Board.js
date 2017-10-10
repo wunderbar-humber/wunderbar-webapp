@@ -7,7 +7,7 @@ class Board extends Component {
         <div className="col s2">
           <div className="row">
             <div className="col s12 m6">
-              <div className="card">
+              <div className="card z-depth-5">
                 <div className="card-image">
                   <span className="card-title">Card Title</span>
                   <a className="btn-floating halfway-fab waves-effect waves-light red">
