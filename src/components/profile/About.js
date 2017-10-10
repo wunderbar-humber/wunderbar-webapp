@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AboutDesign.css';
 
 class About extends Component {
   render() {
@@ -16,7 +17,7 @@ class About extends Component {
           </div>
           <div className="row">
             <div className="col s12 m5">
-              <div className="card-panel black">
+              <div className="card-panel black z-depth-5">
                 <span className="white-text">
                   I am a very simple card. I am good at containing small bits of
                   information. I am convenient because I require little markup
