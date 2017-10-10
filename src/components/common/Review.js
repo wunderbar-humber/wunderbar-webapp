@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 
 /**
  * 
@@ -8,13 +7,11 @@ import $ from 'jquery';
  * @extends {Component}
  */
 class Review extends Component {
-  componentDidMount() {}
-
   render() {
     return (
       <div>
         <li className="collection-item avatar">
-          <img src="images/yuna.jpg" alt className="circle" />
+          <img src="images/yuna.jpg" alt="imageOfMyHuy" className="circle" />
           <span className="title">Review</span>
           <br />
           <span className="title">Name</span>

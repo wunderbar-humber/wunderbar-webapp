@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 
 /**
  * 
@@ -8,8 +7,6 @@ import $ from 'jquery';
  * @extends {Component}
  */
 class Description extends Component {
-  componentDidMount() {}
-
   render() {
     return (
       <div>

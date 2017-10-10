@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 import Review from '../common/Review';
 
 /**
@@ -9,8 +8,6 @@ import Review from '../common/Review';
  * @extends {Component}
  */
 class ReviewList extends Component {
-  componentDidMount() {}
-
   render() {
     return (
       <div>

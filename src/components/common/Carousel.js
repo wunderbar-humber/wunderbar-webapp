@@ -9,9 +9,7 @@ import $ from 'jquery';
  */
 class Carousel extends Component {
   componentDidMount() {
-    $(document).ready(function() {
-      $('.carousel').carousel();
-    });
+    $('.carousel').carousel();
   }
 
   render() {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 
 /**
  * 
@@ -37,8 +36,8 @@ class SmallMap extends Component {
           <p>ХУЙНЯ ЕБНАЯ</p>
         </div>
         <div className="card-action">
-          <a href="#">Bookmark</a>
-          <a href="#">UBER</a>
+          <a href="">Bookmark</a>
+          <a href="">UBER</a>
         </div>
       </div>
     );
