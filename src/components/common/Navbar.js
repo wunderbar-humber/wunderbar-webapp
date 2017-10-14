@@ -5,12 +5,14 @@ class Navbar extends Component {
   render() {
     return (
       <div className="top-nav">
-        <h1 className="h1">
-          <a href="/">Wunderbar</a>
-        </h1>
-        <h1 className="h1">
-          <a href="#!">Sign In</a>
-        </h1>
+        <a className="logo" href="/">
+          Wunderbar
+        </a>
+
+        <a className="signup" href="#!">
+          Sign Up
+        </a>
+
         <div className="flexsearch">
           <div className="flexsearch--wrapper">
             <form
@@ -22,7 +24,7 @@ class Navbar extends Component {
                 <input
                   className="browser-default flexsearch--input "
                   type="search"
-                  placeholder="search"
+                  placeholder="Search..."
                 />
               </div>
               <input

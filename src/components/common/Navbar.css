@@ -29,25 +29,31 @@
  * Configurable Styles *
  ***********************/
 .flexsearch {
-  padding: 0 25px 0 200px; /* Padding for other horizontal elements */
+  padding: 0 25px 0 0; /* Padding for other horizontal elements */
 }
 
 .flexsearch--input {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  height: 60px;
+  height: 40px;
   padding: 0 46px 0 10px;
-  border-color: #888;
-  border-radius: 35px; /* (height/2) + border-width */
-  border-style: solid;
-  border-width: 5px;
-  margin-top: 15px;
+  border-radius: 21px; /* (height/2) + border-width */
+  border: solid 1px #ccc;
+  margin: 5px 0 5px 10px;
   color: #333;
   font-family: 'Helvetica', sans-serif;
-  font-size: 26px;
+  font-size: 15px;
+  padding: 0 0 0 30px;
+  background: #ededed
+    url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat
+    9px center;
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .flexsearch--submit {
@@ -57,9 +63,9 @@
   display: block;
   width: 60px;
   height: 60px;
-  padding: 0;
+  padding: 0 80px 0 0;
   border: none;
-  margin-top: 20px; /* margin-top + border-width */
+  margin-top: -4px; /* margin-top + border-width */
   margin-right: 5px; /* border-width */
   background: transparent;
   color: #888;
@@ -70,7 +76,12 @@
 
 .flexsearch--input:focus {
   outline: none;
-  border-color: #333;
+  background-color: #fff;
+  border-color: #66cc75;
+
+  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
 }
 
 .flexsearch--input:focus.flexsearch--submit {
@@ -91,26 +102,35 @@ input:-moz-placeholder {
 }
 
 /****************
- * Pretify demo *
+ * Pretify *
  ****************/
-.h1 {
+.logo {
   float: left;
-  margin: 25px;
+  margin: 5px;
   color: #333;
   font-family: 'Helvetica', sans-serif;
-  font-size: 45px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 45px;
   text-align: center;
 }
-.h1:last-of-type {
+.signup {
   float: right;
+  margin: 5px 40px 5px 0;
+  color: #333;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
 }
 .top-nav {
-  background: lightblue;
+  background: white;
   position: fixed;
   top: 0;
   width: 100%;
+  height: auto;
   max-width: 100%;
   z-index: 1;
+  overflow: hidden;
 }
