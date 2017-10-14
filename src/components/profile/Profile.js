@@ -15,33 +15,42 @@ class Profile extends Component {
   render() {
     return (
       <Router basename="/profile">
-        <div>
-          <nav>
-            <div className="nav-wrapper">
-              <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <div className="Profile">
+          <div className="center-align">
+            <h1 className="Name">{this.props.name}</h1>
+            <img
+              className="circle responsive-img"
+              src={this.state.image}
+              alt={this.props.name}
+            />
+            <Profile person={this.state.person} quote={this.state.quote} />
+          </div>
+          <nav className="container center-align">
+            <div>
+              <ul className="tabs">
                 <li>
-                  <div class="col s12 m8 offset-m2 l6 offset-l3">
-                    <div class="card-panel grey lighten-5 z-depth-1">
-                      <div className="row valign-wrapper">
-                        <div className="col s2">
-                          <img
-                            src=""
-                            alt=""
-                            className="circle responsive-img"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <Link
+                    to="/about"
+                    className="waves-effect waves-teal btn-flat"
+                  >
+                    MyInfo
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/about">Profile</Link>
+                  <Link
+                    to="/board"
+                    className="waves-effect waves-teal btn-flat"
+                  >
+                    Boards
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/board">Boards</Link>
-                </li>
-                <li>
-                  <Link to="/pastReviews">Past Reviews</Link>
+                  <Link
+                    to="/pastReviews"
+                    className="waves-effect waves-teal btn-flat"
+                  >
+                    Past Reviews
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -54,5 +63,19 @@ class Profile extends Component {
     );
   }
 }
+
+const profileinfo = {
+  person: {
+    name: 'Aditya-Gulhane',
+    biography:
+      '23 year old Designer / Developer living in Toronto. Originally from Nagpur, India. Love to make stuff.'
+  },
+  image:
+    'http://static1.squarespace.com/static/55acc005e4b098e615cd80e2/t/57b057398419c2c454f09924/1471025851733/',
+  quote: {
+    content: 'Carpe Diem',
+    source: "Dead Poet's Society "
+  }
+};
 
 export default Profile;
