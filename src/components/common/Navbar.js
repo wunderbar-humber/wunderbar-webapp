@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
+import ProfileButton from './ProfileButton';
 
 class Navbar extends Component {
   render() {
@@ -10,7 +11,7 @@ class Navbar extends Component {
         </a>
 
         <a className="signup" href="#!">
-          Sign Up
+          {/* <ProfileButton/> */}Sign Up
         </a>
 
         <div className="flexsearch">
