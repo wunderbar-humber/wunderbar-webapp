@@ -4,52 +4,35 @@ import './Navbar.css';
 class Navbar extends Component {
   render() {
     return (
-      <div>
-        <ul id="profile-dropdown" className="dropdown-content">
-          <li>
-            <a href="#!">Profile</a>
-          </li>
-          <li className="divider" />
-          <li>
-            <a href="#!">Bookmarks</a>
-          </li>
-          <li className="divider" />
-          <li>
-            <a href="#!">Logout</a>
-          </li>
-        </ul>
-        <nav>
-          <div className="nav-wrapper container">
-            <a href="#" className="brand-logo left">
-              Wunderbar
-            </a>
-            <form>
-              <div className="input-field center hide-on-med-and-down">
-                <input id="search" type="search" />
-                <label className="label-icon" for="search">
-                  <i className="material-icons">search</i>
-                </label>
-                <i className="material-icons">close</i>
+      <div className="top-nav">
+        <h1 className="h1">
+          <a href="/">Wunderbar</a>
+        </h1>
+        <h1 className="h1">
+          <a href="#!">Sign In</a>
+        </h1>
+        <div className="flexsearch">
+          <div className="flexsearch--wrapper">
+            <form
+              className="flexsearch--form browser-default"
+              action="#"
+              method="post"
+            >
+              <div className="flexsearch--input-wrapper">
+                <input
+                  className="browser-default flexsearch--input "
+                  type="search"
+                  placeholder="search"
+                />
               </div>
+              <input
+                className="flexsearch--submit"
+                type="submit"
+                value="&#10140;"
+              />
             </form>
-            <ul className="right hide-on-med-and-down">
-              <li>
-                <a
-                  href="#!"
-                  data-activates="profile-dropdown"
-                  className="dropdown-button"
-                >
-                  <img
-                    src={this.props.profileImage}
-                    alt="profile"
-                    className="circle responsive-img"
-                  />
-                  {this.props.profileName}
-                </a>
-              </li>
-            </ul>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }
