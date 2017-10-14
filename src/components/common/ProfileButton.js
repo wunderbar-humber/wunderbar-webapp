@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ProfileButton.css';
 import $ from 'jquery';
 
 class ProfileButton extends Component {
@@ -23,17 +24,17 @@ class ProfileButton extends Component {
 
         <ul id="dropdown1" className="dropdown-content">
           <li>
-            <a href="#!" className="blue white-text">
+            <a href="#!" className="facebook white-text">
               <i className="material-icons" />Facebook Log In
             </a>
           </li>
           <li>
-            <a href="#!" className="red white-text">
+            <a href="#!" className="google white-text">
               Google+ Log In
             </a>
           </li>
           <li>
-            <a href="#!" className="green white-text">
+            <a href="#!" className="email white-text">
               Email Sign Up
             </a>
           </li>
