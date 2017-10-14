@@ -20,10 +20,9 @@ class Profile extends Component {
             <h1 className="Name">{this.props.name}</h1>
             <img
               className="circle responsive-img"
-              src={this.state.image}
+              src={this.props.image}
               alt={this.props.name}
             />
-            <Profile person={this.state.person} quote={this.state.quote} />
           </div>
           <nav className="container center-align">
             <div>
@@ -70,8 +69,7 @@ const profileinfo = {
     biography:
       '23 year old Designer / Developer living in Toronto. Originally from Nagpur, India. Love to make stuff.'
   },
-  image:
-    'http://static1.squarespace.com/static/55acc005e4b098e615cd80e2/t/57b057398419c2c454f09924/1471025851733/',
+  image: 'http://drpattydental.com/wp-content/uploads/2017/05/placeholder.png',
   quote: {
     content: 'Carpe Diem',
     source: "Dead Poet's Society "
