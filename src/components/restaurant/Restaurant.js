@@ -14,22 +14,19 @@ import Reviews from '../common/review/Reviews';
  * @extends {Component}
  */
 class Restaurant extends Component {
+  componentDidMount() {}
   render() {
-    const reviewList = [
-      {
-        image: mainImage,
-        name: 'Maxim',
-        title: 'My First Review',
-        review:
-          'This restaurant is great, I love it so much that i wet my Pants for it'
-      },
-      {
-        image: secondImage,
-        name: 'Anton',
-        title: 'My Other Review',
-        review: 'Damoi, cyka cyka blyat'
-      }
-    ];
+    this.name = 'Ramen Isshin';
+    this.desc =
+      'Popular destination specializing in Japanese ramen noodle soup, with vegetarian options available.';
+    this.address = '421 College St, Toronto, ON M5T 1T1';
+    this.hours = '11:30AM–10PM';
+    this.web = 'doordash.com';
+    this.phone = '(416) 367-4013';
+    this.numberOfReviews = '1';
+
+    this.center = [59.938043, 30.337157];
+    this.zoom = 9;
 
     return (
       <div>
@@ -37,11 +34,19 @@ class Restaurant extends Component {
           <Carousel images={[mainImage, secondImage]} />
 
           <div className="row">
-            <div className="col s8">
-              <Description />
+            <div className="col s6">
+              <Description
+                name={this.name}
+                desc={this.desc}
+                address={this.address}
+                hours={this.hours}
+                web={this.web}
+                phone={this.phone}
+                numberOfReviews={this.numberOfReviews}
+              />
             </div>
-            <div className="col s4">
-              <SmallMap />
+            <div className="col s6">
+              <SmallMap center={this.center} zoom={this.zoom} />
             </div>
           </div>
         </div>
