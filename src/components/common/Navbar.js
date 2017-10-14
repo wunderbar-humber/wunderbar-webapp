@@ -10,9 +10,12 @@ class Navbar extends Component {
           Wunderbar
         </a>
 
-        <a className="signup" href="#!">
-          {/* <ProfileButton/> */}Sign Up
-        </a>
+        {/* <a className="signup" href="#!">
+           <ProfileButton/> Sign Up
+        </a> */}
+        <div className="signup">
+          <ProfileButton />
+        </div>
 
         <div className="flexsearch">
           <div className="flexsearch--wrapper">

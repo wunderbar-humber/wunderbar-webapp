@@ -1,58 +1,43 @@
 import React, { Component } from 'react';
-import './ProfileButton.css';
 import $ from 'jquery';
 
 class ProfileButton extends Component {
   componentDidMount() {
-    $('.user-menu').click(function() {
-      $(this).toggleClass('show');
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
     });
   }
   render() {
     return (
       <div id="main-wrapper">
-        <main className="main" role="main" id="main-content">
-          <div id="main-top-bar">
-            <a href="#" className="main-logo" />
-            <div className="user-menu">
-              <div class="user-menu-item">
-                <div className="user-image-wrapper">
-                  <span className="user-image">
-                    <img src="" />
-                  </span>
-                </div>
-                <div className="user-name-wrapper">
-                  Santa <i className="fa fa-caret-down" />
-                </div>
-              </div>
-              <div classname="user-dropdown">
-                <a href="#" className="dropdown-item">
-                  Home
-                </a>
-                <a href="#" className="dropdown-item">
-                  Profile
-                </a>
-                <a href="#" className="dropdown-item">
-                  {' '}
-                  Company
-                </a>
-                <a href="#" className="dropdown-item">
-                  {' '}
-                  Billing
-                </a>
-                <a href="#" className="dropdown-item">
-                  {' '}
-                  Report a Problem
-                </a>
-                <a href="#" className="dropdown-item">
-                  {' '}
-                  Logout
-                </a>
-              </div>
-            </div>
-            <div className="shape" />
-          </div>
-        </main>
+        <a className="dropdown-button btn" href="#" data-activates="dropdown1">
+          Sign Up
+        </a>
+
+        <ul id="dropdown1" className="dropdown-content">
+          <li>
+            <a href="#!" className="blue white-text">
+              <i className="material-icons" />Facebook Log In
+            </a>
+          </li>
+          <li>
+            <a href="#!" className="red white-text">
+              Google+ Log In
+            </a>
+          </li>
+          <li>
+            <a href="#!" className="green white-text">
+              Email Sign Up
+            </a>
+          </li>
+        </ul>
       </div>
     );
   }
