@@ -4,7 +4,7 @@ import secondImage from './images/3.jpg';
 import Carousel from '../common/Carousel';
 import Description from '../common/Description';
 import SmallMap from '../common/SmallMap';
-import ReviewList from '../common/ReviewList';
+import Reviews from '../common/review/Reviews';
 
 /**
  * This is the view which show all the details of the restaurant.
@@ -16,6 +16,21 @@ import ReviewList from '../common/ReviewList';
 class Restaurant extends Component {
   componentDidMount() {}
   render() {
+    const reviewList = [
+       {
+        image: mainImage,
+         name: 'Maxim',
+         title: 'My First Review',
+         review:
+           'This restaurant is great, I love it so much that i wet my Pants for it'
+       },
+       {
+         image: secondImage,
+         name: 'Anton',
+         title: 'My Other Review',
+        review: 'Damoi, cyka cyka blyat'
+       }
+     ];
     this.name = 'Ramen Isshin';
     this.desc =
       'Popular destination specializing in Japanese ramen noodle soup, with vegetarian options available.';
@@ -64,7 +79,7 @@ class Restaurant extends Component {
         </div>
 
         <div className="container">
-          <ReviewList />
+          <Reviews reviewList={reviewList} />
         </div>
       </div>
     );
