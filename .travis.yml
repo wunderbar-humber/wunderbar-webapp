@@ -10,7 +10,7 @@ deploy:
   api_key: $HEROKU_API_KEY
   app:
     master: wunderbar-humber
-    heroku-setup: wunderbar-humber-dev
+    develop: wunderbar-humber-dev
 notifications:
     slack: fishsticks-humber:$SLACK_TOKEN
     email: false
