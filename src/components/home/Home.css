@@ -1,0 +1,13 @@
+#side-nav {
+  background-color: #90a4ae;
+  height: inherit;
+}
+
+#main-content {
+  background-color: #26a69a;
+  height: inherit;
+}
+
+#home-page {
+  height: 80vh;
+}

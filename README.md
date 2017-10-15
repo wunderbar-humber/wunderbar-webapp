@@ -1,4 +1,5 @@
-# Wunderbar WebApp      [![Build Status](https://travis-ci.org/fishsticks-humber/wunderbar-webapp.svg?branch=develop)](https://travis-ci.org/fishsticks-humber/wunderbar-webapp)
+# Wunderbar WebApp 
+[![Build Status](https://travis-ci.org/fishsticks-humber/wunderbar-webapp.svg?branch=develop)](https://travis-ci.org/fishsticks-humber/wunderbar-webapp)
 
 This is the front end for the Wunderbar application.
 
@@ -7,11 +8,13 @@ This is the front end for the Wunderbar application.
 2. Clone repository  
 `git clone https://github.com/fishsticks-humber/wunderbar-webapp.git`
 3. Install dependencies  
-`yarn install`
+`yarn`
 3. Run a sanity check  
 `yarn test`
 4. Check the commands you can use during development - [Documentation](#available-scripts)
 5. If the tests pass, then start your development in your dedicated branch
+6. Start the development server  
+`yarn start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -137,7 +140,7 @@ We are always open to [your feedback](https://github.com/facebookincubator/creat
 After creation, your project should look like this:
 
 ```
-my-app/
+wunderbar-webapp/
   README.md
   node_modules/
   package.json
@@ -145,6 +148,13 @@ my-app/
     index.html
     favicon.ico
   src/
+    assets/
+      images/
+      resources/
+    components/
+      common/
+      home/
+      profile/
     App.css
     App.js
     App.test.js
