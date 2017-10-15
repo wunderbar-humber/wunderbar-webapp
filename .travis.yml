@@ -7,10 +7,10 @@ script:
   - yarn build
 deploy:
   provider: heroku
-  api_key: heroku_api_key
+  api_key: $HEROKU_API_KEY
   app:
     master: wunderbar-humber
     heroku-setup: wunderbar-humber-dev
 notifications:
-    slack: fishsticks-humber:yBlIrV8LokTLApwdkvVZJ8K9
+    slack: fishsticks-humber:$SLACK_TOKEN
     email: false
