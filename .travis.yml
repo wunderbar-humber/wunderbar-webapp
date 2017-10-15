@@ -4,7 +4,13 @@ node_js:
 cache: yarn
 script:
   - yarn test
-  - yarn build 
+  - yarn build
+deploy:
+  provider: heroku
+  api_key: heroku_api_key
+  app:
+    master: wunderbar-humber
+    develop: wunderbar-humber-dev
 notifications:
     slack: fishsticks-humber:yBlIrV8LokTLApwdkvVZJ8K9
     email: false
