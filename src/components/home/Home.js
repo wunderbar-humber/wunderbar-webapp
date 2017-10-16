@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Preloader from '../common/CirclePreloader';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Card from './../common/Card';
 import './Home.css';
 
 /**
@@ -33,7 +34,14 @@ class Home extends Component {
             </ul>
           </div>
           <div className="col s12 m8 l9" id="main-content">
-            <Preloader className="center-align valign-wrapper" />
+            <Card
+              restaurantName="Isshin"
+              restaurantImage="https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256"
+              restaurantCategory="Oriental"
+              restaurantAddress="College Street 232, Toronto, ON"
+              restaurantPhone="(111)-111-1111"
+              restaurantPrice="$$"
+            />
           </div>
         </div>
       </main>
