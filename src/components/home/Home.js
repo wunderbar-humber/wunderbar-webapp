@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router } from 'react-router-dom';
-import Card from './../common/Card';
+import Feed from './Feed';
 import './Home.css';
 
 /**
@@ -20,7 +19,10 @@ let FILTER_CAFE = 'cafes';
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = { filters: [FILTER_RESTAURANTS, FILTER_CAFE] };
+    this.state = {
+      filters: [FILTER_RESTAURANTS],
+      restaurantList: testRestaurantList
+    };
   }
 
   /**
@@ -32,11 +34,18 @@ class Home extends Component {
   addFilter(filter) {
     let updatedFilters = this.state.filters.slice(); // create copy of state array
 
-    // add only if filter doesn't already exist
-    if (updatedFilters.indexOf(filter) === -1) {
-      updatedFilters.push(filter);
-      this.setState({ filters: updatedFilters });
+    if (filter === FILTER_ALL) {
+      // if filter is 'all', then remove all other filters and only keep that one
+      updatedFilters = [FILTER_ALL];
+    } else {
+      // add only if filter doesn't already exist
+      if (updatedFilters.indexOf(filter) === -1) {
+        updatedFilters.push(filter);
+      }
     }
+    this.setState({ filters: updatedFilters });
+
+    this.updateFeed(updatedFilters);
   }
 
   /**
@@ -54,6 +63,65 @@ class Home extends Component {
       updatedFilters.splice(index, 1);
       this.setState({ filters: updatedFilters });
     }
+
+    this.updateFeed(updatedFilters);
+  }
+
+  /**
+   * Resets all filters and restaurant list
+   * 
+   * @param {any} e 
+   * @memberof Home
+   */
+  reset(e) {
+    this.setState({
+      filters: [],
+      restaurantList: []
+    });
+  }
+
+  /**
+   * Updates the state restaurant list according to the supplied filter array
+   * 
+   * @param {string[]} filters 
+   * @memberof Home
+   */
+  updateFeed(filters) {
+    let updatedRestaurantList = [];
+    this.setState({
+      restaurantList: updatedRestaurantList
+    });
+    filters.forEach(filter => {
+      switch (filter) {
+        case FILTER_ALL:
+          updatedRestaurantList = updatedRestaurantList
+            .concat(testRestaurantList)
+            .concat(testCafeList)
+            .concat(testPubList);
+          break;
+
+        case FILTER_RESTAURANTS:
+          updatedRestaurantList = updatedRestaurantList.concat(
+            testRestaurantList
+          );
+          break;
+
+        case FILTER_CAFE:
+          updatedRestaurantList = updatedRestaurantList.concat(testCafeList);
+          break;
+
+        case FILTER_PUBS_BARS:
+          updatedRestaurantList = updatedRestaurantList.concat(testPubList);
+          break;
+
+        default:
+          this.reset();
+          break;
+      }
+    });
+    this.setState({
+      restaurantList: updatedRestaurantList
+    });
   }
 
   render() {
@@ -94,6 +162,11 @@ class Home extends Component {
                   Pubs &amp; Bars
                 </a>
               </li>
+              <li>
+                <a className="btn" onClick={this.reset.bind(this)}>
+                  Reset
+                </a>
+              </li>
               <div className="divider" />
               <li>
                 <a className="btn">Settings</a>
@@ -117,38 +190,7 @@ class Home extends Component {
               })}
             </div>
             <div className="row">
-              <Card
-                restaurantName="Isshin"
-                restaurantImage="https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256"
-                restaurantCategory="Oriental"
-                restaurantAddress="College Street 232, Toronto, ON"
-                restaurantPhone="(111)-111-1111"
-                restaurantPrice="$$"
-              />
-              <Card
-                restaurantName="Isshin"
-                restaurantImage="https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256"
-                restaurantCategory="Oriental"
-                restaurantAddress="College Street 232, Toronto, ON"
-                restaurantPhone="(111)-111-1111"
-                restaurantPrice="$$"
-              />
-              <Card
-                restaurantName="Isshin"
-                restaurantImage="https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256"
-                restaurantCategory="Oriental"
-                restaurantAddress="College Street 232, Toronto, ON"
-                restaurantPhone="(111)-111-1111"
-                restaurantPrice="$$"
-              />
-              <Card
-                restaurantName="Isshin"
-                restaurantImage="https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256"
-                restaurantCategory="Oriental"
-                restaurantAddress="College Street 232, Toronto, ON"
-                restaurantPhone="(111)-111-1111"
-                restaurantPrice="$$"
-              />
+              <Feed restaurantList={this.state.restaurantList} />
             </div>
           </div>
         </div>
@@ -158,3 +200,116 @@ class Home extends Component {
 }
 
 export default Home;
+
+let testRestaurantList = [
+  {
+    name: 'Isshin',
+    image:
+      'https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256',
+    category: 'Japanese',
+    address: 'College Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$$'
+  },
+  {
+    name: 'Kinton',
+    image: 'http://www.kintonramen.com/img/logos/kinton.png',
+    category: 'Japanese',
+    address: 'King Street 232, Toronto, ON',
+    phone: '(647)-111-111',
+    price: '$$'
+  },
+  {
+    name: 'Burrito Boyz',
+    image:
+      'https://static1.squarespace.com/static/578ce85a29687f705d94f1a2/57cb3aab579fb377697429d4/57f994eee58c620809383978/1476968741703/burritoboyzfood.jpg?format=1500w',
+    category: 'Mexican',
+    address: 'University Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$'
+  },
+  {
+    name: 'Something else',
+    image:
+      'https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256',
+    category: 'Japanese',
+    address: 'College Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$'
+  }
+];
+
+let testCafeList = [
+  {
+    name: 'Cafe 1',
+    image:
+      'http://www.urbanphoto.net/blog/wp-content/uploads/2010/04/torontocafe3.jpg',
+    category: 'Candian',
+    address: 'College Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$$'
+  },
+  {
+    name: 'Cafe 2',
+    image: 'http://images.dailyhive.com/20160627074801/Quantum-Coffee-1.jpg',
+    category: 'Japanese',
+    address: 'King Street 232, Toronto, ON',
+    phone: '(647)-111-111',
+    price: '$$'
+  },
+  {
+    name: 'Cafe 3',
+    image:
+      'http://s3.amazonaws.com/btoimage/prism-thumbnails/articles/20ef-2016616-coffee-shops-toronto-west-side.jpg-resize-_opacity_100-frame_bg_color_FFF-gravity_center-q_70-preserve_ratio_true-w_1300_.jpg',
+    category: 'Mexican',
+    address: 'University Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$$$'
+  },
+  {
+    name: 'Cafe 4',
+    image:
+      'https://torontopubs.files.wordpress.com/2012/07/victory-cafe-toronto.jpg',
+    category: 'Japanese',
+    address: 'College Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$'
+  }
+];
+
+let testPubList = [
+  {
+    name: 'Pub 1',
+    image: 'http://pubfrato.com/wp-content/uploads/2013/09/1.jpg',
+    category: 'Candian',
+    address: 'College Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$$'
+  },
+  {
+    name: 'Pub 2',
+    image:
+      'http://s3.amazonaws.com/btoimage/prism-thumbnails/articles/0e9b-2015421-queen-east-bars-pubs-toronto.jpg-resize_then_crop-_frame_bg_color_FFF-h_1365-gravity_center-q_70-preserve_ratio_true-w_2048_.jpg',
+    category: 'Japanese',
+    address: 'King Street 232, Toronto, ON',
+    phone: '(647)-111-111',
+    price: '$$'
+  },
+  {
+    name: 'Pub 3',
+    image: 'https://i.ytimg.com/vi/27cZvWAroGo/maxresdefault.jpg',
+    category: 'Mexican',
+    address: 'University Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$$$'
+  },
+  {
+    name: 'Pub 4',
+    image:
+      'https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256',
+    category: 'Japanese',
+    address: 'College Street 232, Toronto, ON',
+    phone: '(111)-111-111',
+    price: '$$'
+  }
+];

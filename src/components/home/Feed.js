@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Card from './../common/Card';
+// TODO add prop shape
+// import PropTypes from 'prop-types';
 
 /**
  * Home components acts as the main component for the Home Page
