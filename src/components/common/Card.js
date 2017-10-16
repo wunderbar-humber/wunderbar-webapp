@@ -7,7 +7,7 @@ class Card extends Component {
         <div className="col s12 m3">
           <div className="card">
             <div className="card-image">
-              <img src={this.props.restaurantImage} />
+              <img src={this.props.restaurantImage} alt="restaurant" />
               <a className="btn-floating halfway-fab waves-effect waves-light blue">
                 <i className="material-icons">bookmark</i>
               </a>
@@ -22,10 +22,10 @@ class Card extends Component {
               <p>Phone: {this.props.restaurantPhone}</p>
             </div>
             <div className="card-action">
-              <a className="green-text" href="#">
+              <a className="green-text">
                 <i className="material-icons">done</i>Like
               </a>
-              <a className="red-text right" href="#">
+              <a className="red-text right">
                 <i className="material-icons">clear</i>Dislike
               </a>
             </div>

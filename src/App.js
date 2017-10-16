@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
 import Restaurant from './components/restaurant/Restaurant';
 import Navbar from './components/common/Navbar';
-import NavbarNew from './components/common/NavbarNew';
 import Card from './components/common/Card';
 
 /**

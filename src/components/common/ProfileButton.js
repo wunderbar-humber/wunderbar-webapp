@@ -18,25 +18,21 @@ class ProfileButton extends Component {
   render() {
     return (
       <div id="main-wrapper">
-        <a className="dropdown-button btn" href="#" data-activates="dropdown1">
+        <a className="dropdown-button btn" data-activates="dropdown1">
           Sign Up
         </a>
 
         <ul id="dropdown1" className="dropdown-content">
           <li>
-            <a href="#!" className="facebook white-text">
+            <a className="facebook white-text">
               <i className="material-icons" />Facebook Log In
             </a>
           </li>
           <li>
-            <a href="#!" className="google white-text">
-              Google+ Log In
-            </a>
+            <a className="google white-text">Google+ Log In</a>
           </li>
           <li>
-            <a href="#!" className="email white-text">
-              Email Sign Up
-            </a>
+            <a className="email white-text">Email Sign Up</a>
           </li>
         </ul>
       </div>
