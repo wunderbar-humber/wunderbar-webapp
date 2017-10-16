@@ -10,7 +10,8 @@
 }
 
 #side-nav a {
-  width: 100%;
+  width: inherit;
+  overflow: visible;
 }
 
 #main-content {
@@ -22,6 +23,7 @@
   height: 90vh;
   margin-top: 55px;
 }
+
 main .row {
   margin-bottom: 0px;
 }
