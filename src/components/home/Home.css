@@ -1,11 +1,12 @@
 #side-nav {
-  background-color: #90a4ae;
+  background-color: #eceff1;
   height: inherit;
   text-align: center;
+  overflow: auto;
 }
 
 #side-nav li {
-  padding: 20px;
+  padding: 1.5em;
 }
 
 #side-nav a {
@@ -13,12 +14,13 @@
 }
 
 #main-content {
-  background-color: #26a69a;
   height: inherit;
   overflow: scroll;
 }
 
 #home-page {
   height: 90vh;
-  margin-bottom: -20px;
+}
+main .row {
+  margin-bottom: 0px;
 }
