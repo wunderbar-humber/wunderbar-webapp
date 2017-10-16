@@ -5,6 +5,7 @@ import Carousel from '../common/Carousel';
 import Description from '../common/Description';
 import SmallMap from '../common/SmallMap';
 import Reviews from '../common/review/Reviews';
+import './restaurant.css';
 
 /**
  * This is the view which show all the details of the restaurant.
@@ -17,30 +18,30 @@ class Restaurant extends Component {
   componentDidMount() {}
   render() {
     const reviewList = [
-       {
+      {
         image: mainImage,
-         name: 'Maxim',
-         title: 'My First Review',
-         review:
-           'This restaurant is great, I love it so much that i wet my Pants for it'
-       },
-       {
-         image: secondImage,
-         name: 'Anton',
-         title: 'My Other Review',
+        name: 'Maxim',
+        title: 'My First Review',
+        review:
+          'This restaurant is great, I love it so much that i wet my Pants for it'
+      },
+      {
+        image: secondImage,
+        name: 'Anton',
+        title: 'My Other Review',
         review: 'Damoi, cyka cyka blyat'
-       }
-     ];
+      }
+    ];
     this.name = 'Ramen Isshin';
     this.desc =
       'Popular destination specializing in Japanese ramen noodle soup, with vegetarian options available.';
     this.address = '421 College St, Toronto, ON M5T 1T1';
     this.hours = '11:30AM–10PM';
-    this.web = 'doordash.com';
+    this.web = 'www.doordash.com';
     this.phone = '(416) 367-4013';
-    this.numberOfReviews = '1';
+    this.numberOfReviews = '2';
 
-    this.center = [59.938043, 30.337157];
+    this.center = { lat: 59.95, lng: 30.33 };
     this.zoom = 9;
 
     return (
@@ -59,22 +60,32 @@ class Restaurant extends Component {
                 phone={this.phone}
                 numberOfReviews={this.numberOfReviews}
               />
+              {/* comment-review text area*/}
+              <fieldset id="commentContainer">
+                <div className="row">
+                  <div className="input-field">
+                    <textarea
+                      id="textarea1"
+                      className="materialize-textarea"
+                      defaultValue={''}
+                    />
+                    <label htmlFor="textarea1">Comment on this</label>
+                  </div>
+                </div>
+                <div className="row">
+                  <button
+                    className="waves-effect waves-light btn-large"
+                    type="submit"
+                    name="action"
+                  >
+                    Post<i className="material-icons right">send</i>
+                  </button>
+                </div>
+              </fieldset>
             </div>
-            <div className="col s6">
-              <SmallMap center={this.center} zoom={this.zoom} />
+            <div className="col s5">
+              <SmallMap defaultCenter={this.center} defaultZoom={this.zoom} />
             </div>
-          </div>
-        </div>
-
-        <div className="container">
-          {/* comment-review text area*/}
-          <div className="input-field col s12">
-            <textarea
-              id="textarea1"
-              className="materialize-textarea"
-              defaultValue={''}
-            />
-            <label htmlFor="textarea1">Comment on this</label>
           </div>
         </div>
 
