@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './../common/Card';
+import './Feed.css';
 // TODO add prop shape
 // import PropTypes from 'prop-types';
 
@@ -12,7 +13,7 @@ import Card from './../common/Card';
 class Feed extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="col s12 cards-container">
         {this.props.restaurantList.map((restaurant, index) => {
           return (
             <Card
