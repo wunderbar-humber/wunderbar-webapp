@@ -34,7 +34,10 @@ class Home extends Component {
   addFilter(filter) {
     let updatedFilters = this.state.filters.slice(); // create copy of state array
 
-    if (filter === FILTER_ALL) {
+    if (
+      filter === FILTER_ALL ||
+      (updatedFilters.length === 1 && updatedFilters[0] === FILTER_ALL)
+    ) {
       // if filter is 'all', then remove all other filters and only keep that one
       updatedFilters = [FILTER_ALL];
     } else {
