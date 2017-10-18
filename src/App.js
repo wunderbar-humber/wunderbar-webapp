@@ -4,7 +4,7 @@ import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
 import Restaurant from './components/restaurant/Restaurant';
-import Navbar from './components/common/Navbar';
+import Navbar from './components/common/navbar/Navbar';
 
 /**
  * This component is the root/main component of this React application

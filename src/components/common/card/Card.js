@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './Card.css';
 
+/**
+ * The Card component renders a materialize-css card with the supplied props
+ * 
+ * @class Card
+ * @extends {Component}
+ */
 class Card extends Component {
   render() {
     return (

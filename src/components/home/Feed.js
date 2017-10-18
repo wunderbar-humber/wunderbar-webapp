@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Card from './../common/Card';
+import Card from './../common/card/Card';
 import './Feed.css';
 import PropTypes from 'prop-types';
 
 /**
- * Home components acts as the main component for the Home Page
+ * The feed component renders all the restaurant cards
  * 
- * @class Home
+ * @class Feed
  * @extends {Component}
  */
 class Feed extends Component {
@@ -31,7 +31,7 @@ class Feed extends Component {
   }
 }
 
-Feed.PropTypes = {
+Feed.propTypes = {
   restaurantList: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
