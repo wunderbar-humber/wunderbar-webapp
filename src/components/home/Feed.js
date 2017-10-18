@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Card from './../common/Card';
 import './Feed.css';
-// TODO add prop shape
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 /**
  * Home components acts as the main component for the Home Page
@@ -31,5 +30,18 @@ class Feed extends Component {
     );
   }
 }
+
+Feed.PropTypes = {
+  restaurantList: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      image: PropTypes.any.isRequired,
+      category: PropTypes.string,
+      address: PropTypes.string,
+      phone: PropTypes.string,
+      price: PropTypes.string
+    })
+  )
+};
 
 export default Feed;
