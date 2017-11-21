@@ -30,7 +30,7 @@ class Profile extends Component {
                 <li>
                   <Link
                     to="/about"
-                    className="waves-effect waves-teal btn-flat"
+                    className="waves-effect waves-teal btn-flat center-align"
                   >
                     MyInfo
                   </Link>
@@ -38,7 +38,7 @@ class Profile extends Component {
                 <li>
                   <Link
                     to="/board"
-                    className="waves-effect waves-teal btn-flat"
+                    className="waves-effect waves-teal btn-flat center-align"
                   >
                     Boards
                   </Link>
@@ -46,7 +46,7 @@ class Profile extends Component {
                 <li>
                   <Link
                     to="/pastReviews"
-                    className="waves-effect waves-teal btn-flat"
+                    className="waves-effect waves-teal btn-flat center-align"
                   >
                     Past Reviews
                   </Link>
