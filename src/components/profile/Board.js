@@ -22,11 +22,7 @@ class Board extends Component {
                   </a>
                 </div>
                 <div className="card-content">
-                  <p>
-                    I am a very simple card. I am good at containing small bits
-                    of information. I am convenient because I require little
-                    markup to use effectively.
-                  </p>
+                  <p>Now Here's a Photo of Mel Gibson for you to enjoy!</p>
                 </div>
               </div>
             </div>
