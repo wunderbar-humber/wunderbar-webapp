@@ -1,0 +1,18 @@
+.facebook {
+  background: #3b5998;
+}
+.facebook:hover {
+  background: darkblue;
+}
+.google {
+  background: red;
+}
+.google:hover {
+  background: darkred;
+}
+.email {
+  background: green;
+}
+.email:hover {
+  background: darkgreen;
+}
