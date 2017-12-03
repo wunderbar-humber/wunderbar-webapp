@@ -63,17 +63,4 @@ class Profile extends Component {
   }
 }
 
-const profileinfo = {
-  person: {
-    name: 'Aditya-Gulhane',
-    biography:
-      '23 year old Designer / Developer living in Toronto. Originally from Nagpur, India. Love to make stuff.'
-  },
-  image: 'http://drpattydental.com/wp-content/uploads/2017/05/placeholder.png',
-  quote: {
-    content: 'Carpe Diem',
-    source: "Dead Poet's Society "
-  }
-};
-
 export default Profile;

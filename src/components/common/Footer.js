@@ -30,11 +30,6 @@ class Footer extends Component {
                     Contact Us
                   </a>
                 </li>
-                <li>
-                  <a className="grey-text text-lighten-3" href="#!">
-                    Link 4
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
