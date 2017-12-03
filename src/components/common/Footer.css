@@ -1,0 +1,20 @@
+.page-footer {
+  background-color: black;
+}
+.Modal {
+  position: absolute;
+  top: 300px;
+  left: 400px;
+  right: 400px;
+  bottom: 300px;
+  background-color: #eceff1;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eceff1;
+}
