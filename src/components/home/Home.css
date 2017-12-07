@@ -1,13 +1,37 @@
 #side-nav {
-  background-color: #90a4ae;
+  background-color: #eceff1;
   height: inherit;
+  text-align: center;
+  overflow: scroll;
+}
+
+#side-nav li {
+  padding: 1.5em;
+}
+
+#side-nav a {
+  width: inherit;
+  overflow: visible;
 }
 
 #main-content {
-  background-color: #26a69a;
   height: inherit;
+  overflow: scroll;
 }
 
 #home-page {
-  height: 80vh;
+  height: 90vh;
+  margin-top: 55px;
+}
+
+main .row {
+  margin-bottom: 0px;
+}
+
+.chip i {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 8px;
 }

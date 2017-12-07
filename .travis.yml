@@ -12,5 +12,5 @@ deploy:
     master: wunderbar-humber
     develop: wunderbar-humber-dev
 notifications:
-    slack: fishsticks-humber:$SLACK_TOKEN
+    slack: fishsticks-humber:yBlIrV8LokTLApwdkvVZJ8K9
     email: false
