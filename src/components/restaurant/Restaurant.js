@@ -17,7 +17,7 @@ import './restaurant.css';
 class Restaurant extends Component {
   constructor(match) {
     super();
-    console.log(match.match.params);
+    console.log(match);
   }
 
   componentDidMount() {}

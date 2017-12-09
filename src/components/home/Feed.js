@@ -17,6 +17,7 @@ class Feed extends Component {
           return (
             <Card
               key={index}
+              id={restaurant.id}
               restaurantName={restaurant.name}
               restaurantImage={restaurant.image}
               restaurantCategory={restaurant.category}
