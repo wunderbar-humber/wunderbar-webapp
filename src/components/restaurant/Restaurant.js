@@ -15,12 +15,10 @@ import './restaurant.css';
  * @extends {Component}
  */
 class Restaurant extends Component {
-  constructor(match) {
+  constructor(props) {
     super();
-    console.log(match);
+    console.log(props.match);
   }
-
-  componentDidMount() {}
 
   render() {
     const reviewList = [

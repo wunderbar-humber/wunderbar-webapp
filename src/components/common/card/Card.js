@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './Card.css';
 
 /**
@@ -18,7 +17,7 @@ class Card extends Component {
             <i className="material-icons">bookmark</i>
           </a>
         </div>
-        <Link to={`restaurant/${this.props.id}`}>
+        <a href={`restaurant/${this.props.id}`}>
           <div className="card-content">
             <span className="card-title">{this.props.restaurantName}</span>
             <p>
@@ -28,7 +27,7 @@ class Card extends Component {
             <p>Address: {this.props.restaurantAddress}</p>
             <p>Phone: {this.props.restaurantPhone}</p>
           </div>
-        </Link>
+        </a>
         <div className="card-action">
           <a className="green-text">
             <i className="material-icons">done</i>Like
