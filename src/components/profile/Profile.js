@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import About from './About';
 import PastReviews from './PastReviews';
-import Board from './Board';
+import Bookmarks from './Bookmarks';
 import './ProfileDesign.css';
 
 /**
@@ -37,10 +37,10 @@ class Profile extends Component {
                 </li>
                 <li>
                   <Link
-                    to="/board"
+                    to="/bookmarks"
                     className="waves-effect waves-teal btn-flat center-align"
                   >
-                    Boards
+                    Bookmarks
                   </Link>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ class Profile extends Component {
             </div>
           </nav>
           <Route path="/about" component={About} />
-          <Route path="/board" component={Board} />
+          <Route path="/bookmarks" component={Bookmarks} />
           <Route path="/pastReviews" component={PastReviews} />
         </div>
       </Router>
