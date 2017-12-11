@@ -35,6 +35,7 @@ class Feed extends Component {
 Feed.propTypes = {
   restaurantList: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       image: PropTypes.any.isRequired,
       category: PropTypes.string,
