@@ -1,58 +1,28 @@
 import React, { Component } from 'react';
+import Reviews from '../common/review//Reviews';
+import mainImage from '../restaurant/images/1.jpg';
+import secondImage from '../restaurant/images/3.jpg';
 
 class PastReviews extends Component {
   render() {
+    const reviewList = [
+      {
+        image: mainImage,
+        name: 'Maxim',
+        title: 'My First Review',
+        review:
+          'This restaurant is great, I love it so much that i wet my Pants for it'
+      },
+      {
+        image: secondImage,
+        name: 'Anton',
+        title: 'My Other Review',
+        review: 'Damoi, cyka cyka blyat'
+      }
+    ];
     return (
       <div className="container">
-        <div className="col s2">
-          <h1>List of your review</h1>
-          <ul class="collection">
-            <li class="collection-item avatar">
-              <img src="images/yuna.jpg" alt="" class="circle" />
-              <span class="title">Title</span>
-              <p>
-                First Line <br />
-                Second Line
-              </p>
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">grade</i>
-              </a>
-            </li>
-            <li class="collection-item avatar">
-              <i class="material-icons circle">folder</i>
-              <span class="title">Title</span>
-              <p>
-                First Line <br />
-                Second Line
-              </p>
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">grade</i>
-              </a>
-            </li>
-            <li class="collection-item avatar">
-              <i class="material-icons circle green">insert_chart</i>
-              <span class="title">Title</span>
-              <p>
-                First Line <br />
-                Second Line
-              </p>
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">grade</i>
-              </a>
-            </li>
-            <li class="collection-item avatar">
-              <i class="material-icons circle red">play_arrow</i>
-              <span class="title">Title</span>
-              <p>
-                First Line <br />
-                Second Line
-              </p>
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">grade</i>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <Reviews reviewList={reviewList} />
       </div>
     );
   }
