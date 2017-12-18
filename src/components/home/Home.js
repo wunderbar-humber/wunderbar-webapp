@@ -206,6 +206,7 @@ export default Home;
 
 let testRestaurantList = [
   {
+    id: '1',
     name: 'Isshin',
     image:
       'https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256',
@@ -215,6 +216,7 @@ let testRestaurantList = [
     price: '$$$'
   },
   {
+    id: '2',
     name: 'Kinton',
     image: 'http://www.kintonramen.com/img/logos/kinton.png',
     category: 'Japanese',
@@ -223,6 +225,7 @@ let testRestaurantList = [
     price: '$$'
   },
   {
+    id: '3',
     name: 'Burrito Boyz',
     image:
       'https://static1.squarespace.com/static/578ce85a29687f705d94f1a2/57cb3aab579fb377697429d4/57f994eee58c620809383978/1476968741703/burritoboyzfood.jpg?format=1500w',
@@ -232,6 +235,7 @@ let testRestaurantList = [
     price: '$'
   },
   {
+    id: '11',
     name: 'Something else',
     image:
       'https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256',
@@ -244,6 +248,7 @@ let testRestaurantList = [
 
 let testCafeList = [
   {
+    id: '4',
     name: 'Cafe 1',
     image:
       'http://www.urbanphoto.net/blog/wp-content/uploads/2010/04/torontocafe3.jpg',
@@ -253,6 +258,7 @@ let testCafeList = [
     price: '$$$'
   },
   {
+    id: '5',
     name: 'Cafe 2',
     image: 'http://images.dailyhive.com/20160627074801/Quantum-Coffee-1.jpg',
     category: 'Japanese',
@@ -261,6 +267,7 @@ let testCafeList = [
     price: '$$'
   },
   {
+    id: '6',
     name: 'Cafe 3',
     image:
       'http://s3.amazonaws.com/btoimage/prism-thumbnails/articles/20ef-2016616-coffee-shops-toronto-west-side.jpg-resize-_opacity_100-frame_bg_color_FFF-gravity_center-q_70-preserve_ratio_true-w_1300_.jpg',
@@ -270,6 +277,7 @@ let testCafeList = [
     price: '$$$$'
   },
   {
+    id: '7',
     name: 'Cafe 4',
     image:
       'https://torontopubs.files.wordpress.com/2012/07/victory-cafe-toronto.jpg',
@@ -282,6 +290,7 @@ let testCafeList = [
 
 let testPubList = [
   {
+    id: '8',
     name: 'Pub 1',
     image: 'http://pubfrato.com/wp-content/uploads/2013/09/1.jpg',
     category: 'Candian',
@@ -299,6 +308,7 @@ let testPubList = [
     price: '$$'
   },
   {
+    id: '9',
     name: 'Pub 3',
     image: 'https://i.ytimg.com/vi/27cZvWAroGo/maxresdefault.jpg',
     category: 'Mexican',
@@ -307,6 +317,7 @@ let testPubList = [
     price: '$$$$'
   },
   {
+    id: '10',
     name: 'Pub 4',
     image:
       'https://static.wixstatic.com/media/ca289c_6f22b05392fd43b0a71a30f8ec041607~mv2.png_256',
