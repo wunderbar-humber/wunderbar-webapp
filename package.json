@@ -8,6 +8,7 @@
     "google-map-react": "^0.24.0",
     "husky": "^0.14.3",
     "jsdoc": "^3.5.5",
+    "jwt-simple": "^0.5.1",
     "lint-staged": "^4.2.1",
     "materialize-css": "^0.100.2",
     "prettier": "^1.7.0",

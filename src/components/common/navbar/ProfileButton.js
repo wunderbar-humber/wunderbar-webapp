@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
+import jwt from 'jwt-simple';
 import './ProfileButton.css';
 import $ from 'jquery';
+import { API } from '../../../assets/resources/config';
 
 class ProfileButton extends Component {
   componentDidMount() {
@@ -20,10 +22,31 @@ class ProfileButton extends Component {
 
     const responseGoogle = response => {
       console.log(response);
+      var payload = response.hg.id_token;
+      var secret = Buffer.from('fe1a1915a379f3be5394b64d14794932', 'hex');
+      var token = jwt.encode(payload, secret);
+      var decoded = jwt.decode(payload, secret);
+      console.log(decoded);
     };
 
     const responseFacebook = response => {
       console.log(response);
+      var data = new FormData();
+      data.append('user', 'smth');
+
+      fetch(API.host.concat(API.user.register), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // body: JSON.stringify({
+        //   name: response.name,
+        //   email: response.email,
+        //   photo: response.picture.data.url
+
+        // })
+        body: data
+      });
     };
 
     ReactDOM.render(
