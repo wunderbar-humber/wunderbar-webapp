@@ -7,7 +7,14 @@ class Users extends Component {
     return (
       <div className="col s12 cards-container">
         {this.props.infoList.map((users, index) => {
-          return <Card key={index} />;
+          return (
+            <Card
+              key={index}
+              firstName={users.firstName}
+              lastName={users.lastName}
+              emailAddress={users.email}
+            />
+          );
         })}
       </div>
     );
@@ -23,3 +30,5 @@ Users.propTypes = {
     })
   )
 };
+
+export default Users;

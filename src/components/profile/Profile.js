@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import About from './About';
 import PastReviews from './PastReviews';
 import Bookmarks from './Bookmarks';
+import Carousel from '../common/Carousel';
+import imgPlaceholder from '../profile/photos/imagePlaceholder.jpg';
 import './ProfileDesign.css';
 
 /**
@@ -12,17 +14,18 @@ import './ProfileDesign.css';
  * @extends {Component}
  */
 class Profile extends Component {
+  componentDidMount() {}
   render() {
+    const imagePlaceholder = {
+      image: imgPlaceholder
+    };
+
     return (
       <Router basename="/profile">
         <div className="Profile">
           <div className="center-align">
             <h1 className="Name">{this.props.name}</h1>
-            <img
-              className="circle responsive-img"
-              src={this.props.image}
-              alt={this.props.name}
-            />
+            <Carousel images={[imagePlaceholder]} />
           </div>
           <nav className="container center-align">
             <div>
