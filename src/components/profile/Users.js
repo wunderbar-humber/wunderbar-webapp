@@ -22,11 +22,11 @@ class Users extends Component {
 }
 
 Users.propTypes = {
-  infoList: PropTypes.arrayof(
+  infoList: PropTypes.arrayOf(
     PropTypes.shape({
-      firstName: PropTypes.string.isRequired,
-      lastName: PropTypes.string.isRequired,
-      email: PropTypes.any.isRequired
+      firstName: PropTypes.string,
+      lastName: PropTypes.string,
+      email: PropTypes.string.isRequired
     })
   )
 };
