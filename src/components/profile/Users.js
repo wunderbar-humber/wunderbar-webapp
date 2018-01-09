@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Card from './../common/card/Card';
+import InfoCard from './InfoCard';
 
 class Users extends Component {
   render() {
     return (
       <div className="col s12 cards-container">
-        {this.props.infoList.map((users, index) => {
-          return (
-            <Card
-              key={index}
-              firstName={users.firstName}
-              lastName={users.lastName}
-              emailAddress={users.email}
-            />
-          );
-        })}
+        <InfoCard
+          firstName={this.props.firstName}
+          lastName={this.props.lastName}
+          email={this.props.email}
+          myinfo={this.props.myinfo}
+        />
       </div>
     );
   }

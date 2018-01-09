@@ -7,6 +7,8 @@ class About extends Component {
     this.firstName = 'Aditya';
     this.lastName = 'Gulhane';
     this.email = 'aditya.gulhane@yahoo.com';
+    this.myinfo =
+      "I'm a young developer from Toronto, Canada working in Web Development Technologies ";
 
     return (
       <div className="container">
@@ -16,6 +18,7 @@ class About extends Component {
               firstName={this.firstName}
               lastName={this.lastName}
               email={this.email}
+              myinfo={this.myinfo}
             />
           </div>
         </div>
