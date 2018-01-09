@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import About from './About';
+import mainImage from '../restaurant/images/1.jpg';
 import PastReviews from './PastReviews';
 import Bookmarks from './Bookmarks';
-import Carousel from '../common/Carousel';
-import imgPlaceholder from '../profile/photos/imagePlaceholder.jpg';
+import Carousel from '../common/ProfileCarousel';
+import secondImage from '../profile/photos/image1.jpg';
 import './ProfileDesign.css';
 
 /**
@@ -16,16 +17,21 @@ import './ProfileDesign.css';
 class Profile extends Component {
   componentDidMount() {}
   render() {
-    const imagePlaceholder = {
-      image: imgPlaceholder
-    };
+    const imagePlaceholder = [
+      {
+        image: mainImage
+      },
+      {
+        image: secondImage
+      }
+    ];
 
     return (
       <Router basename="/profile">
         <div className="Profile">
           <div className="center-align">
             <h1 className="Name">{this.props.name}</h1>
-            <Carousel images={[imagePlaceholder]} />
+            <Carousel images={[mainImage, secondImage]} />
           </div>
           <nav className="container center-align">
             <div>
