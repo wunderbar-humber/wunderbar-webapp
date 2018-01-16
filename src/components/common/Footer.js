@@ -51,7 +51,10 @@ class Footer extends Component {
                     contentLabel="Modal #2 Global Style Override Example"
                     onRequestClose={this.handleCloseModal2}
                   >
-                    <p>Modal Text</p>
+                    <p>
+                      We are an energetic team with diversed culture having
+                      passion and talent for our work
+                    </p>
                     <button onClick={this.handleCloseModal2}>Close</button>
                   </ReactModal>
                 </li>

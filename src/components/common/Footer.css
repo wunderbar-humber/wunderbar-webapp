@@ -8,8 +8,8 @@
   right: 400px;
   bottom: 300px;
   background-color: #eceff1;
+  z-index: 100;
 }
-
 .Overlay {
   position: fixed;
   top: 0;
@@ -17,4 +17,7 @@
   right: 0;
   bottom: 0;
   background-color: #eceff1;
+}
+.ReactModal {
+  z-index: 6;
 }

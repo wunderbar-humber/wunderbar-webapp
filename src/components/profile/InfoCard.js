@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../common/card/Card.css';
 
 class InfoCard extends Component {
   render() {
