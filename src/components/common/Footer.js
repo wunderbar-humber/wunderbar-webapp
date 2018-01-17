@@ -25,7 +25,7 @@ class Footer extends Component {
                     About Wunderbar
                   </a>
                   <ReactModal
-                    isOpen={this.state.showModal1}
+                    isOpen={this.state.showModal}
                     contentLabel="Modal #1 Global Style Override Example"
                     onRequestClose={this.handleCloseModal}
                   >
@@ -70,13 +70,7 @@ class Footer extends Component {
                     contentLabel="Modal #3 Global Style Override Example"
                     onRequestClose={this.handleCloseModal3}
                   >
-                    <p>
-                      Wunderbar is a app which will provide you status of your
-                      favourite restaurants,live tracking of how busy that place
-                      is, want to reach there call an uber from our app itself
-                      and better yet want to rate your favourite joints.
-                      Wunderbar is the place for you.
-                    </p>
+                    <p>github.com/fishsticks-humber</p>
                     <button onClick={this.handleCloseModal3}>Close</button>
                   </ReactModal>
                 </li>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './AboutDesign.css';
 import Users from '../profile/Users';
 
 class About extends Component {
@@ -13,7 +12,7 @@ class About extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col s6">
+          <div className="center-align">
             <Users
               firstName={this.firstName}
               lastName={this.lastName}
